@@ -36,9 +36,9 @@ public class AccountTest extends BaseClass{
 
     @Execution(ExecutionMode.CONCURRENT)
     @RepeatedTest(1000)
-    void test() {
+    void createAccount() {
         AccountModel accountModel = AccountModel.getAccountModel();
-        Response response = accountsApiService.post(accountModel);
+        Response response = accountsApiService.createAccount(accountModel);
         Assertions.assertEquals(HttpStatus.CREATED.value(), response.getStatusCode());
         Optional<Account> optionalAccount = accountsDBService.getAccountsByPassportUUID(accountModel.getPassportUUID());
         Assertions.assertTrue(optionalAccount.isPresent());

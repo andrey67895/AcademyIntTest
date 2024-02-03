@@ -24,7 +24,8 @@ public class AccountsApiService {
     public void init() {
         apiHelpers = new ApiHelpers(appProperties.getBASE_URL());
     }
-    public Response post(AccountModel model) {
+
+    public Response createAccount(AccountModel model) {
         return apiHelpers.post(ACCOUNTS_PATH, model);
     }
 
