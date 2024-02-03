@@ -18,5 +18,5 @@ import org.springframework.stereotype.Component;
 @SpringBootConfiguration
 @PropertySource(value={"classpath:application.properties"})
 public class AppProperties {
-    private String BASE_URL = "http://localhost:8080";
+    private String BASE_URL = "http://localhost:8787";
 }
