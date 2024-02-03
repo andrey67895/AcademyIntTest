@@ -17,7 +17,6 @@ import java.util.Optional;
 
 public class AccountTest extends BaseClass{
 
-
     private static long start;
 
     @BeforeAll
